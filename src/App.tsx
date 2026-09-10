@@ -75,7 +75,12 @@ export default function App() {
   }[page];
 
   return (
-    <div className="app-layout">
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', width: '100vw', overflow: 'hidden' }}>
+      <div className="gov-top-bar">
+        <span>REPUBBLICA ITALIANA</span>
+        <span>Regione del Veneto</span>
+      </div>
+      <div className="app-layout" style={{ height: 'auto', width: '100%', flex: 1 }}>
       <Sidebar activePage={page} onPageChange={setPage} />
       <div className="main-content">
         <Header title={pageTitle.title} subtitle={pageTitle.subtitle} />
@@ -96,6 +101,7 @@ export default function App() {
             <Chatbot data={data} />
           )}
         </div>
+      </div>
       </div>
     </div>
   );
