@@ -76,10 +76,6 @@ export default function App() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', width: '100vw', overflow: 'hidden' }}>
-      <div className="gov-top-bar">
-        <span>REPUBBLICA ITALIANA</span>
-        <span>Regione del Veneto</span>
-      </div>
       <div className="app-layout" style={{ height: 'auto', width: '100%', flex: 1, minHeight: 0 }}>
       <Sidebar activePage={page} onPageChange={setPage} />
       <div className="main-content">
