@@ -9,8 +9,8 @@ interface ChartProps {
 export function CurvaPerditaChart({ simulation }: ChartProps) {
   const data = simulation.curvaPerdita;
 
-  const formatYAxis = (value: any) => `€ ${(Number(value) / 1000).toFixed(0)}k`;
-  const formatXAxis = (value: any) => `€ ${(Number(value) / 1000).toFixed(0)}k`;
+  const formatYAxis = (value: any) => formatCurrency(Number(value));
+  const formatXAxis = (value: any) => formatCurrency(Number(value));
 
   return (
     <div className="minimal-card fade-in">

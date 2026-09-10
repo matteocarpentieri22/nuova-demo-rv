@@ -12,7 +12,7 @@ export function PerditaProvinciaChart({ simulation }: ChartProps) {
     perdita: p.perdita
   }));
 
-  const formatXAxis = (value: any) => `€ ${(Number(value) / 1000).toFixed(0)}k`;
+  const formatXAxis = (value: any) => formatCurrency(Number(value));
 
   return (
     <div className="minimal-card fade-in">

@@ -12,7 +12,7 @@ export function PerditaFasciaChart({ simulation }: ChartProps) {
     perdita: f.riduzioneTotale
   }));
 
-  const formatYAxis = (value: any) => `€ ${(Number(value) / 1000).toFixed(0)}k`;
+  const formatYAxis = (value: any) => formatCurrency(Number(value));
 
   return (
     <div className="minimal-card fade-in">
