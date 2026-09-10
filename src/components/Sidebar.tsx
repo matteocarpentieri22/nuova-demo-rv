@@ -37,9 +37,8 @@ export function Sidebar({ activePage, onPageChange }: SidebarProps) {
           <span>Assistente IA</span>
         </div>
       </nav>
-
-      <div className="sidebar-footer">
-        Demo Prototipale · Dati Sintetici
+      <div className="sidebar-footer" style={{ padding: '24px 16px', display: 'flex', justifyContent: 'center' }}>
+        <img src="/logo_veneto.png" alt="Regione del Veneto" style={{ maxWidth: '140px', height: 'auto' }} />
       </div>
     </aside>
   );
