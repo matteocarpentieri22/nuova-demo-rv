@@ -9,7 +9,9 @@ export function Sidebar({ activePage, onPageChange }: SidebarProps) {
   return (
     <aside className="sidebar">
       <div className="sidebar-header">
-        <div className="sidebar-logo">RV</div>
+        <div style={{ marginRight: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#fff', padding: '6px', borderRadius: '4px' }}>
+          <img src="/logo_veneto.png" alt="RV" style={{ width: '32px', height: 'auto' }} />
+        </div>
         <div>
           <div className="sidebar-title">Regione del Veneto</div>
           <div className="sidebar-subtitle">Piattaforma Tributaria</div>
@@ -37,9 +39,6 @@ export function Sidebar({ activePage, onPageChange }: SidebarProps) {
           <span>Assistente IA</span>
         </div>
       </nav>
-      <div className="sidebar-footer" style={{ padding: '24px 16px', display: 'flex', justifyContent: 'center' }}>
-        <img src="/logo_veneto.png" alt="Regione del Veneto" style={{ maxWidth: '140px', height: 'auto' }} />
-      </div>
     </aside>
   );
 }
