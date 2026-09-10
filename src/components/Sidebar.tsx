@@ -9,8 +9,8 @@ export function Sidebar({ activePage, onPageChange }: SidebarProps) {
   return (
     <aside className="sidebar">
       <div className="sidebar-header">
-        <div style={{ marginRight: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#fff', padding: '6px', borderRadius: '4px' }}>
-          <img src="/logo_veneto.png" alt="RV" style={{ width: '32px', height: 'auto' }} />
+        <div style={{ marginRight: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#fff', padding: '4px', borderRadius: '6px' }}>
+          <img src="/logo_veneto.png" alt="RV" style={{ width: '56px', height: 'auto' }} />
         </div>
         <div>
           <div className="sidebar-title">Regione del Veneto</div>
