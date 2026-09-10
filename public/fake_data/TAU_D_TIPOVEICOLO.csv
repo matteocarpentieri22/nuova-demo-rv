@@ -1,0 +1,9 @@
+ID_TIPO_VEICOLO,CODICE,DESCRIZIONE
+1,AU,Autovettura
+2,MO,Motociclo
+3,AU,Autocarro
+4,RM,Rimorchio
+5,BU,Autobus
+6,CA,Caravan
+7,TR,Trattore stradale
+8,SP,Veicolo speciale

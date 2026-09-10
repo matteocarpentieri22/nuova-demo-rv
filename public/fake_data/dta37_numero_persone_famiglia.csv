@@ -1,0 +1,19 @@
+id_fascia,de_numero_persone,num_persone_da,num_persone_a,num_ordinamento
+1,Nessuno,0,0,1
+2,Una Persona,1,1,2
+3,Due Persone,2,2,3
+4,Tre Persone,3,3,4
+5,Quattro Persone,4,4,5
+6,Cinque Persone,5,5,6
+7,Sei Persone,6,6,7
+8,Sette Persone,7,7,8
+9,Otto Persone,8,8,9
+10,Nove Persone,9,9,10
+11,Dieci Persone,10,10,11
+12,Undici Persone,11,11,12
+13,Dodici Persone,12,12,13
+14,Tredici Persone,13,13,14
+15,Quattordici Persone,14,14,15
+16,Quindici Persone,15,15,16
+17,Sedici Persone,16,16,17
+18,Diciassette persone ed oltre,17,9999,18
