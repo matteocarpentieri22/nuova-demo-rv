@@ -59,14 +59,10 @@ body {
 }
 
 .sidebar {
-  width: 260px;
+  width: 280px;
   background-color: #002B55; /* Deep Navy */
-  border-right: none;
   display: flex;
   flex-direction: column;
-  position: fixed;
-  height: 100vh;
-  z-index: 10;
   color: #FFFFFF;
 }
 
@@ -154,10 +150,10 @@ body {
 
 .main-content {
   flex: 1;
-  margin-left: 260px;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* ========= INSTITUTIONAL HEADER ========= */
