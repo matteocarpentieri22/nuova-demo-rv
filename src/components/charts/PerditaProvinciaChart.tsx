@@ -12,8 +12,7 @@ export function PerditaProvinciaChart({ simulation }: ChartProps) {
     perdita: p.perdita
   }));
 
-  const formatTooltip = (value: number) => formatCurrency(value);
-  const formatXAxis = (value: number) => `€ ${(value / 1000).toFixed(0)}k`;
+  const formatXAxis = (value: any) => `€ ${(Number(value) / 1000).toFixed(0)}k`;
 
   return (
     <div className="minimal-card fade-in">
@@ -33,11 +32,11 @@ export function PerditaProvinciaChart({ simulation }: ChartProps) {
             <XAxis type="number" tickFormatter={formatXAxis} tick={{ fill: '#5C6F82', fontSize: 12 }} axisLine={false} tickLine={false} />
             <YAxis dataKey="name" type="category" tick={{ fill: '#5C6F82', fontSize: 12 }} axisLine={false} tickLine={false} />
             <Tooltip 
-              formatter={(val: number) => [formatCurrency(val), 'Perdita']}
+              formatter={(val: any) => [formatCurrency(Number(val)), 'Perdita']}
               contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
             />
             <Bar dataKey="perdita" fill="#D2E3FC" radius={[0, 4, 4, 0]}>
-              <LabelList dataKey="perdita" position="right" formatter={formatCurrency} style={{ fill: '#1D1D1F', fontSize: 11, fontWeight: 500 }} />
+              <LabelList dataKey="perdita" position="right" formatter={(val: any) => formatCurrency(Number(val))} style={{ fill: '#1D1D1F', fontSize: 11, fontWeight: 500 }} />
             </Bar>
           </BarChart>
         </ResponsiveContainer>

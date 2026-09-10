@@ -12,8 +12,8 @@ export function GettitoConfrontoChart({ simulation }: ChartProps) {
     { name: 'Scenario simulato', value: simulation.gettitoSimulato, color: '#CC5500' },
   ];
 
-  const formatTooltip = (value: number) => formatCurrency(value);
-  const formatYAxis = (value: number) => `€ ${(value / 1000).toFixed(0)}k`;
+  const formatTooltip = (value: any) => formatCurrency(Number(value));
+  const formatYAxis = (value: any) => `€ ${(Number(value) / 1000).toFixed(0)}k`;
 
   return (
     <div className="minimal-card fade-in">
@@ -41,7 +41,7 @@ export function GettitoConfrontoChart({ simulation }: ChartProps) {
               {data.map((entry, index) => (
                 <Cell key={`cell-${index}`} fill={entry.color} />
               ))}
-              <LabelList dataKey="value" position="top" formatter={formatCurrency} style={{ fill: '#1D1D1F', fontSize: 12, fontWeight: 500 }} />
+              <LabelList dataKey="value" position="top" formatter={(val: any) => formatCurrency(Number(val))} style={{ fill: '#1D1D1F', fontSize: 12, fontWeight: 500 }} />
             </Bar>
           </BarChart>
         </ResponsiveContainer>

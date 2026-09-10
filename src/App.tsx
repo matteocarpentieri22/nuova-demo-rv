@@ -32,7 +32,7 @@ export default function App() {
 
   useEffect(() => {
     if (data) {
-      const result = simulateReduction(data.contribuentiVeicoli, soglia, riduzione, data.fasceReddito, provinciaFiltro);
+      const result = simulateReduction(data.contribuentiVeicoli, soglia, riduzione, provinciaFiltro);
       setSimulation(result);
     }
   }, [data, soglia, riduzione, provinciaFiltro]);

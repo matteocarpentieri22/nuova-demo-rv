@@ -9,9 +9,8 @@ interface ChartProps {
 export function CurvaPerditaChart({ simulation }: ChartProps) {
   const data = simulation.curvaPerdita;
 
-  const formatTooltip = (value: number) => formatCurrency(value);
-  const formatYAxis = (value: number) => `€ ${(value / 1000).toFixed(0)}k`;
-  const formatXAxis = (value: number) => `€ ${(value / 1000).toFixed(0)}k`;
+  const formatYAxis = (value: any) => `€ ${(Number(value) / 1000).toFixed(0)}k`;
+  const formatXAxis = (value: any) => `€ ${(Number(value) / 1000).toFixed(0)}k`;
 
   return (
     <div className="minimal-card fade-in">
@@ -48,7 +47,7 @@ export function CurvaPerditaChart({ simulation }: ChartProps) {
               tickLine={false} 
             />
             <Tooltip 
-              formatter={(val: number) => [formatCurrency(val), 'Perdita di gettito']}
+              formatter={(val: any) => [formatCurrency(Number(val)), 'Perdita di gettito']}
               labelFormatter={(label) => `Soglia di reddito: ${formatCurrency(Number(label))}`}
               contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
             />

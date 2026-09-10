@@ -63,7 +63,7 @@ export function WidgetEquitaFiscale({ data }: ChatWidgetProps) {
             ))}
           </Pie>
           <RechartsTooltip 
-            formatter={(value: number) => [formatNumber(value) + ' contribuenti', 'Platea']}
+            formatter={(value: any) => [formatNumber(Number(value)) + ' contribuenti', 'Platea']}
             contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
           />
           <Legend wrapperStyle={{ fontSize: '0.75rem', fontFamily: 'Titillium Web' }} />
@@ -80,7 +80,7 @@ export function WidgetEquitaFiscale({ data }: ChatWidgetProps) {
 // ==========================================
 // SCENARIO 2: Invarianza di Gettito (Redistribuzione)
 // ==========================================
-export function WidgetRedistribuzione({ data }: ChatWidgetProps) {
+export function WidgetRedistribuzione() {
   // Group by rough income brackets to show diverging bars
   const brackets = [
     { label: '< 15k', diff: -250000, desc: 'Riduzione agevolata' },
@@ -116,7 +116,7 @@ export function WidgetRedistribuzione({ data }: ChatWidgetProps) {
             tick={{ fontSize: 11, fontFamily: 'Titillium Web', fontWeight: 600 }}
           />
           <RechartsTooltip 
-            formatter={(val: number) => formatCurrency(Math.abs(val))}
+            formatter={(val: any) => formatCurrency(Math.abs(Number(val)))}
             contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
           />
           <ReferenceLine x={0} stroke="#17324D" strokeWidth={2} />
@@ -139,7 +139,7 @@ export function WidgetRedistribuzione({ data }: ChatWidgetProps) {
 // ==========================================
 // SCENARIO 3: Vulnerabilità Fiscale (Radar)
 // ==========================================
-export function WidgetVulnerabilita({ data }: ChatWidgetProps) {
+export function WidgetVulnerabilita() {
   // In a real scenario, these scores would be computed by analyzing the data
   // and normalizing risks (0-100 score).
   const radarData = [

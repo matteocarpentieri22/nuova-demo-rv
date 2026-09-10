@@ -1,4 +1,4 @@
-type Page = 'dashboard' | 'model' | 'chatbot';
+type Page = 'dashboard' | 'chatbot';
 
 interface SidebarProps {
   activePage: Page;

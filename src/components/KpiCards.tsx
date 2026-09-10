@@ -1,35 +1,11 @@
-import { useEffect, useState } from 'react';
+
 import type { SimulationResult } from '../types';
 
 interface KpiCardsProps {
   simulation: SimulationResult;
 }
 
-function useAnimatedNumber(end: number, duration: number = 1000) {
-  const [value, setValue] = useState(0);
-
-  useEffect(() => {
-    let startTime: number;
-    let animationFrame: number;
-
-    const animate = (time: number) => {
-      if (!startTime) startTime = time;
-      const progress = Math.min((time - startTime) / duration, 1);
-      const easeOut = 1 - Math.pow(1 - progress, 3);
-      
-      setValue(end * easeOut);
-
-      if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate);
-      }
-    };
-
-    animationFrame = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationFrame);
-  }, [end, duration]);
-
-  return value;
-}
+// Removed useAnimatedNumber as it is not used
 
 function formatVal(val: number, isCurrency: boolean = true) {
   return (

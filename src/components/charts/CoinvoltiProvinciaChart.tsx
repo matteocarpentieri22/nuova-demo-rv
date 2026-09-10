@@ -12,7 +12,7 @@ export function CoinvoltiProvinciaChart({ simulation }: ChartProps) {
     'Veicoli coinvolti': p.contribuentiCoinvolti
   }));
 
-  const formatTooltip = (value: number) => Math.round(value).toLocaleString('it-IT');
+  const formatTooltip = (value: any) => Math.round(Number(value)).toLocaleString('it-IT');
 
   return (
     <div className="minimal-card fade-in">

@@ -12,8 +12,7 @@ export function PerditaFasciaChart({ simulation }: ChartProps) {
     perdita: f.riduzioneTotale
   }));
 
-  const formatTooltip = (value: number) => formatCurrency(value);
-  const formatYAxis = (value: number) => `€ ${(value / 1000).toFixed(0)}k`;
+  const formatYAxis = (value: any) => `€ ${(Number(value) / 1000).toFixed(0)}k`;
 
   return (
     <div className="minimal-card fade-in">
@@ -33,11 +32,11 @@ export function PerditaFasciaChart({ simulation }: ChartProps) {
             <XAxis dataKey="name" tick={{ fill: '#5C6F82', fontSize: 11 }} axisLine={false} tickLine={false} />
             <YAxis tickFormatter={formatYAxis} tick={{ fill: '#5C6F82', fontSize: 12 }} axisLine={false} tickLine={false} />
             <Tooltip 
-              formatter={(val: number) => [formatCurrency(val), 'Perdita']}
+              formatter={(val: any) => [formatCurrency(Number(val)), 'Perdita']}
               contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
             />
             <Bar dataKey="perdita" fill="#008758" radius={[4, 4, 0, 0]}>
-              <LabelList dataKey="perdita" position="top" formatter={formatCurrency} style={{ fill: '#1D1D1F', fontSize: 12, fontWeight: 500 }} />
+              <LabelList dataKey="perdita" position="top" formatter={(val: any) => formatCurrency(Number(val))} style={{ fill: '#1D1D1F', fontSize: 12, fontWeight: 500 }} />
             </Bar>
           </BarChart>
         </ResponsiveContainer>

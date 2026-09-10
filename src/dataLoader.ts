@@ -60,7 +60,7 @@ export async function loadAllData(): Promise<LoadedData> {
     posizioni,
     luoghi,
     province,
-    anagraficheIrpef,
+    /* anagraficheIrpef loaded but unused here */,
     persF,
     fasceReddito,
   ] = await Promise.all([
@@ -178,8 +178,7 @@ export async function loadAllData(): Promise<LoadedData> {
 export function simulateReduction(
   allData: ContribuenteVeicolo[],
   soglia: number,
-  riduzione: number, // 0.25, 0.50, 0.75, 1.0
-  fasceReddito: FasciaReddito[],
+  riduzione: number,
   provinciaFiltro?: string,
 ): SimulationResult {
   const data = provinciaFiltro ? allData.filter(d => d.provinciaNome === provinciaFiltro) : allData;
@@ -187,7 +186,7 @@ export function simulateReduction(
 
   // Find contribuenti with reddito <= soglia
   const coinvolti = data.filter(cv => cv.reddito <= soglia && cv.reddito >= 0);
-  const nonCoinvolti = data.filter(cv => cv.reddito > soglia || cv.reddito < 0);
+  // const nonCoinvolti = data.filter(cv => cv.reddito > soglia || cv.reddito < 0);
 
   const riduzioneTotale = coinvolti.reduce((sum, cv) => sum + cv.bolloCalcolato * riduzione, 0);
   const gettitoSimulato = gettitoAttuale - riduzioneTotale;

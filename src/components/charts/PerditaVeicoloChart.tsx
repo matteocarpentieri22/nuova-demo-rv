@@ -14,8 +14,6 @@ export function PerditaVeicoloChart({ simulation }: ChartProps) {
     value: t.riduzioneTotale
   }));
 
-  const formatTooltip = (value: number) => formatCurrency(value);
-
   return (
     <div className="minimal-card fade-in">
       <div style={{ marginBottom: '24px' }}>
@@ -37,12 +35,12 @@ export function PerditaVeicoloChart({ simulation }: ChartProps) {
               paddingAngle={2}
               dataKey="value"
             >
-              {data.map((entry, index) => (
+              {data.map((_, index) => (
                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
               ))}
             </Pie>
             <Tooltip 
-              formatter={(val: number) => [formatCurrency(val), 'Perdita']}
+              formatter={(val: any) => [formatCurrency(Number(val)), 'Perdita']}
               contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
             />
             <Legend layout="vertical" verticalAlign="middle" align="right" wrapperStyle={{ fontSize: '12px' }} />

@@ -93,9 +93,9 @@ export function Chatbot({ data }: ChatbotProps) {
       case 'equita':
         return <WidgetEquitaFiscale data={data} />;
       case 'redistribuzione':
-        return <WidgetRedistribuzione data={data} />;
+        return <WidgetRedistribuzione />;
       case 'vulnerabilita':
-        return <WidgetVulnerabilita data={data} />;
+        return <WidgetVulnerabilita />;
       default:
         return null;
     }
