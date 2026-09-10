@@ -35,7 +35,7 @@ export function PerditaProvinciaChart({ simulation }: ChartProps) {
               formatter={(val: any) => [formatCurrency(Number(val)), 'Perdita']}
               contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
             />
-            <Bar dataKey="perdita" fill="#D2E3FC" radius={[0, 4, 4, 0]}>
+            <Bar dataKey="perdita" fill="#6699CC" radius={[0, 4, 4, 0]}>
               <LabelList dataKey="perdita" position="right" formatter={(val: any) => formatCurrency(Number(val))} style={{ fill: '#1D1D1F', fontSize: 11, fontWeight: 500 }} />
             </Bar>
           </BarChart>

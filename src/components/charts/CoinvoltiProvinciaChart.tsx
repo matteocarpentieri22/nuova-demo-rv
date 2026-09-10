@@ -36,7 +36,7 @@ export function CoinvoltiProvinciaChart({ simulation }: ChartProps) {
               contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
             />
             <Legend verticalAlign="top" wrapperStyle={{ fontSize: '12px', paddingBottom: '10px' }} iconType="square" />
-            <Bar dataKey="Veicoli non coinvolti" stackId="a" fill="#D2E3FC" />
+            <Bar dataKey="Veicoli non coinvolti" stackId="a" fill="#6699CC" />
             <Bar dataKey="Veicoli coinvolti" stackId="a" fill="#CC5500" radius={[0, 4, 4, 0]} />
           </BarChart>
         </ResponsiveContainer>
