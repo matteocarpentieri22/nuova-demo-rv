@@ -80,7 +80,7 @@ export default function App() {
         <span>REPUBBLICA ITALIANA</span>
         <span>Regione del Veneto</span>
       </div>
-      <div className="app-layout" style={{ height: 'auto', width: '100%', flex: 1 }}>
+      <div className="app-layout" style={{ height: 'auto', width: '100%', flex: 1, minHeight: 0 }}>
       <Sidebar activePage={page} onPageChange={setPage} />
       <div className="main-content">
         <Header title={pageTitle.title} subtitle={pageTitle.subtitle} />
