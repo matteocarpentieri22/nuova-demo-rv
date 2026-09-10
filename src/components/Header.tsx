@@ -12,7 +12,6 @@ export function Header({ title, subtitle }: HeaderProps) {
       </div>
       <div className="main-header-content">
         <div className="header-left">
-          <div className="veneto-logo-placeholder">RV</div>
           <div>
             <h1>{title}</h1>
             <p>{subtitle}</p>
