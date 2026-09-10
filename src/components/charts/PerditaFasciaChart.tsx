@@ -35,9 +35,7 @@ export function PerditaFasciaChart({ simulation }: ChartProps) {
               formatter={(val: any) => [formatCurrency(Number(val)), 'Perdita']}
               contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
             />
-            <Bar dataKey="perdita" fill="#008758" radius={[4, 4, 0, 0]}>
-              <LabelList dataKey="perdita" position="top" formatter={(val: any) => formatCurrency(Number(val))} style={{ fill: '#1D1D1F', fontSize: 12, fontWeight: 500 }} />
-            </Bar>
+            <Bar dataKey="perdita" fill="#008758" radius={[4, 4, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>
