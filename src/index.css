@@ -55,7 +55,7 @@ body {
 /* ========= LAYOUT ========= */
 .app-layout {
   display: flex;
-  min-height: 100vh;
+  height: 100%;
 }
 
 .sidebar {
